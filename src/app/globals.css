@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .btn-lg {
+    @apply px-2 py-3 font-medium not-italic text-lg
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* .large {
+  padding: 8px 12px 8px 12px;
+  border-radius:4px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 32px;
+  
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.medium {
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.small {
+  padding: 2px 6px 2px 6px;
+  border-radius: 4px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.contained {
+  background-color: #3D1FC2;
+  color: #ECE9F9;
+
+  &:hover {
+      background-color: #644CCE;
   }
-}
+  
+  &:active, &:focus {
+      background-color: #2B1688;
+  }
+
+  &:disabled {
+      background-color: #C0C0C0;
+      color: #ABABAB;
+  }
+} */
