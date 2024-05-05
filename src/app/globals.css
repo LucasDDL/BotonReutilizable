@@ -5,7 +5,7 @@
 
 @layer components {
   .btn {
-    @apply border rounded font-medium not-italic;
+    @apply border rounded font-medium not-italic ;
 
     &.btn-sm {
       @apply px-0.5 py-1 text-base;
@@ -43,15 +43,18 @@
   .input {
     @apply border rounded p-2;
     
-    &.md {
+    &.input-md {
       @apply p-3;
     }
 
-    &.lg {
+    &.input-lg {
       @apply p-4;
     }
   }
+  
 }
+
+
 /* .large {
   padding: 8px 12px 8px 12px;
   border-radius:4px;
