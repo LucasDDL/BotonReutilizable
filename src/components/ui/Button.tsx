@@ -1,29 +1,15 @@
 import React, { ComponentProps } from 'react'
 
 export type ButtonProps = ComponentProps<'button'> & {
-  size: 'lg' | 'md' | 'sm',
-  variant: 'contained' | 'outlined' | 'text'
+  size?: 'lg' | 'md' | 'sm',
+  variant?: 'contained' | 'outlined' | 'text'
+  color?: 'primary' | 'neutral'
 }
 
-export function Button({ children, color, size, variant, ...props }: ButtonProps) {
-
-  const sizeClasses = {
-    lg: 'btn-lg',
-    md: '',
-    sm: '',
-  }
-
-  const viariantClasses = {
-    contained: `bg-[${color}]- text-white`,
-    outlined: `border border-[${color}] text-[${color}]`,
-    text: `text-[${color}]`,
-  }
-
-  const classes = `${sizeClasses[size]} ${viariantClasses[variant]}`
-
+export function Button({ children, color = 'primary', size = 'sm', variant = 'contained', ...props }: ButtonProps) {
   return (
     <div>
-      <button className={classes} {...props}>{children}</button>
+      <button className={`btn btn-${size} btn-${color} btn-${variant}`} {...props}>{children}</button>
     </div>
   )
 }

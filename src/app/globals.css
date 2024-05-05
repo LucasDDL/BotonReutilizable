@@ -4,10 +4,57 @@
 
 
 @layer components {
-  .btn-lg {
-    @apply px-2 py-3 font-medium not-italic text-lg
+  .btn {
+    @apply border rounded font-medium not-italic ;
+
+    &.btn-sm {
+      @apply px-0.5 py-1 text-base;
+    }
+
+    &.btn-md {
+      @apply px-1 py-2 text-md;
+    }
+
+    &.btn-lg {
+      @apply px-2 py-3 text-lg;
+    }
+    
+    &.btn-primary {
+      @apply bg-primary-50 border-primary-50 text-primary-95 hover:bg-primary-60 hover:border-primary-60;
+
+      &.btn-outline {
+        @apply bg-[transparent] text-primary-50;
+      }
+    }
+
+    &.btn-neutral {
+      @apply bg-neutral-50 border-neutral-50 text-neutral-95 hover:bg-neutral-60 hover:border-neutral-60;
+
+      &.btn-outline {
+        @apply bg-[transparent] text-neutral-50;
+      }
+    }
   }
+
+  .card {
+    @apply bg-white shadow-md rounded-lg p-4;
+  }
+
+  .input {
+    @apply border rounded p-2;
+    
+    &.input-md {
+      @apply p-3;
+    }
+
+    &.input-lg {
+      @apply p-4;
+    }
+  }
+  
 }
+
+
 /* .large {
   padding: 8px 12px 8px 12px;
   border-radius:4px;

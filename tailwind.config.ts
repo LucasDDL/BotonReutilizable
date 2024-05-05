@@ -48,9 +48,10 @@ const config: Config = {
       'neutral-95': '#EAEAEA',
     },
     fontSize: {
+      sm: ['14px', {lineHeight: '20px'}],
+      base: ['12px', {lineHeight: '18px'}],
+      md: ['14px', {lineHeight: '22px'}],
       lg: ['18px', { lineHeight: '32px' }],
-      base: ['14px', {lineHeight: '22px'}],
-      sm: ['12px', {lineHeight: '18px'}]
     },
     
     extend: {
