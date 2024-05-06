@@ -1,16 +1,19 @@
 import React from 'react'
-import MenuItem from './MenuItem'
+import { MenuItem } from './MenuItem'
+import { Finance } from '@/icons/components/Finance'
 import { Person } from '@/icons/components/Person'
-import { ArrowDown } from '@/icons/components'
+import { SavingsOutline } from '@/icons/components/SavingsOutline'
+import { CartOutline } from '@/icons/components/CartOutline'
 
-export default function Menu() {
+
+export function Menu() {
   return (
-    <div className='flex flex-col gap-[10px]'>
-        <MenuItem startIcon={<Person />} endIcon={<ArrowDown />} label="Inicio"/>
-        <MenuItem label="Administradores"/>
-        <MenuItem label="Finanzas"/>
-        <MenuItem label="Clientes"/>
-        <MenuItem label="Cajas"/>
+    <div className='flex flex-col gap-[10px] '>
+        <MenuItem active={true} startIcon={<Finance className='size-[18px]'/>} label="Inicio"/>
+        <MenuItem startIcon={<Person className='size-[18px]' />} label="Administradores"/>
+        <MenuItem startIcon={<SavingsOutline className='size-[18px]'/>} label="Finanzas"/>
+        <MenuItem startIcon={<Person className='size-[18px]'/>} label="Clientes"/>
+        <MenuItem startIcon={<CartOutline className='size-[18px]'/>} label="Cajas"/>
     </div>
   )
 }

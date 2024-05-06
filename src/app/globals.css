@@ -18,13 +18,19 @@
     &.btn-lg {
       @apply px-2 py-3 text-lg;
     }
-    
+
+
     &.btn-primary {
-      @apply bg-primary-50 border-primary-50 text-primary-95 hover:bg-primary-60 hover:border-primary-60;
+      @apply bg-primary-50 border-primary-50 text-primary-95 hover:bg-primary-60 hover:border-primary-60 disabled:bg-neutral-85 disabled:text-neutral-80 disabled:border-neutral-85;
 
       &.btn-outline {
         @apply bg-[transparent] text-primary-50;
       }
+
+      &.btn-text{
+        @apply text-primary-50 border-[transparent] bg-[transparent]
+      }
+      
     }
 
     &.btn-neutral {
@@ -40,9 +46,13 @@
     @apply bg-white shadow-md rounded-lg p-4;
   }
 
+  .field {
+    @apply rounded border flex py-1 px-2 gap-[6px] items-center
+  }
+
   .input {
-    @apply border rounded p-2;
-    
+    @apply py-1 px-2 w-[300px] h-9 flex flex-col text-[16px] leading-7 text-neutral-60 ;
+
     &.input-md {
       @apply p-3;
     }
@@ -50,10 +60,12 @@
     &.input-lg {
       @apply p-4;
     }
+    input {
+      outline: none;
+      flex: 1;
+    }
   }
-  
 }
-
 
 /* .large {
   padding: 8px 12px 8px 12px;

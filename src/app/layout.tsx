@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fira_Sans } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/components/Sidebar";
+import {Sidebar} from "@/components/Sidebar/Sidebar";
 
-const inter = Inter({ subsets: ["latin"] });
+const fira = Fira_Sans({ subsets: ["latin"], weight: "400", variable: '--font-fira'});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,10 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${fira.variable} font-sans`}>
         <div className="flex min-h-screen">
           <Sidebar />
-          <div className="flex-1">{children}</div>
+          <div className="flex flex-col flex-1 py-[78px] px-11">{children}</div>
         </div>
       </body>
     </html>
