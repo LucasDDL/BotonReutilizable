@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={`${fira.variable} font-sans`}>
         <div className="flex min-h-screen">
           <Sidebar />
-          <div className="flex flex-col flex-1 py-[78px] px-11">{children}</div>
+          <div className="flex flex-col flex-1 ">{children}</div>
         </div>
       </body>
     </html>
