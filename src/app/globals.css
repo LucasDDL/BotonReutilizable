@@ -5,7 +5,7 @@
 
 @layer components {
   .btn {
-    @apply border rounded font-medium not-italic ;
+    @apply border rounded font-medium not-italic flex items-center justify-center ;
 
     &.btn-sm {
       @apply px-0.5 py-1 text-base;

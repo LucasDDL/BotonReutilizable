@@ -54,8 +54,8 @@ export default function Home() {
             </div>
           </div>
           <div className="flex items-center justify-end gap-6 pr-2 self-end">
-            <Button className="font-medium" variant="text" color="primary" size="md">Cancelar</Button>
-            <Button size="md">Guardar</Button>
+            <Button className="font-medium" startIcon={<Settings/>} variant="text" color="primary" size="md">Cancelar</Button>
+            <Button size="md" startIcon={<Settings/>}>Guardar</Button>
           </div>
         </div>
       </div>
