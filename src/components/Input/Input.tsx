@@ -14,7 +14,7 @@ export default function Input({ startIcon, endIcon, label, error, info, inputSiz
 
     return (
         <div className={`input input-${inputSize}`}>
-            <label className='text-lbl text-neutral-65' htmlFor={id}>{label}</label>
+            <label className='text-lbl text-neutral-600' htmlFor={id}>{label}</label>
             <div className='field'>
                 {startIcon}
                 <input id={id} {...props} />

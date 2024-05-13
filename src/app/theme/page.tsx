@@ -1,74 +1,72 @@
 'use client';
 
-import { Button } from "@/components/Button/Button";
-import Color from "color";
-import { useMemo, useState } from "react";
+import Color from 'color';
+import { useMemo, useState } from 'react';
 
 export default function Home() {
-
-  const [color, colorSet] = useState<Color>()
+  const [baseColor, setBaseColor] = useState<Color>(Color('#0ea5e9')); // Initial color is Sky 500
 
   const shades = useMemo(() => {
-    if (!color) {
-      return []
-    }
+    if (!baseColor) return [];
 
-    const shades = []
-    const steps = 21
-    // set the initial color as 0.05 opacity of initial color
-    // so if 0 is #000000 then 0.05 is #0F0F0F
-    for (let i = 0; i < steps; i++) {
-      // if its the first half of steps then darken the color
-      // if its the second half of steps then lighten the color
-      const shade = i < steps / 2 ? color.darken(i / steps) : color.lighten((i - steps / 2) / steps)
+    const shades: Record<number, Color> = {};
+    const steps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-      shades.push(shade)
-    }
+    const isDark = baseColor.isDark(); // Check if base color is dark
+    const mainShadeIndex = isDark ? 400 : 500; // Main shade is 400 for dark, 500 for light
 
-    // order the shades from dark to light
-    shades.sort((a, b) => a.luminosity() - b.luminosity())
-    return shades
-  }, [color])
+    steps.forEach(step => {
+      if (step < mainShadeIndex) {
+        // Lighter shades:
+        const factor = (mainShadeIndex - step) / 300;
+        shades[step] = isDark 
+          ? baseColor.lighten(factor * 1.5) // Lighten more for dark base colors
+          : baseColor.lighten(factor);
+      } else if (step > mainShadeIndex) {
+        // Darker shades:
+        const factor = (step - mainShadeIndex) / 300;
+        shades[step] = isDark 
+          ? baseColor.darken(factor / 3) // Darken less for dark base colors
+          : baseColor.darken(factor);
+      } else {
+        // Main shade:
+        shades[step] = baseColor;
+      }
+    });
+
+    return shades;  }, [baseColor]);
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen gap-1">
+      
+
+      <div className='flex gap-1'>
+        {Object.entries(shades).map(([shade, color]) => (
+          <div
+            key={shade}
+            className="flex items-center justify-center w-12 h-12 rounded-md"
+            style={{ backgroundColor: color.hex() }}
+          >
+            {shade}
+          </div>
+        ))}
+      </div>
       <div className="my-4">
         <input
           type="color"
-          onChange={(e) => {
-            try {
-              colorSet(Color(e.target.value))
-            } catch (error) {
-              colorSet(Color("#000000"))
-            }
-          }}
+          value={baseColor.hex()}
+          onChange={(e) => setBaseColor(Color(e.target.value))}
         />
       </div>
-
       <pre>
         <code>
-          {shades.map((shade, i) => {
-            return `'primary-${i * 5}': '${shade.hex().toLowerCase()}',\n`
-          })}
+          {Object.entries(shades).map(([shade, color]) => (
+            `${shade}: '${color.hex().toLowerCase()}',\n`
+          ))}
         </code>
       </pre>
 
-      <div className="flex gap-1">
-        {shades.map((shade, i) => {
-          const hex = shade.hex().toLowerCase()
-          const main = color?.hex().toLowerCase() === hex
-          return (
-            <div key={i} className={main ? 'size-20' : 'size-10'} style={{ backgroundColor: shade.hex() }}></div>
-          )
-        })}
-      </div>
-      <div className="flex justify-center items-center min-h-screen gap-1">
-        <Button size="lg" color="primary" variant="contained">Label Text</Button>
-        {/* btn btn-lg btn-contained btn-primary */}
-        <Button size="md" variant="outlined">Lebel Text</Button>
-        <Button variant="text">Lebel Text</Button>
-      </div>
+      {/* ... (rest of your UI components using the shades) */}
     </div>
-  )
-
+  );
 }

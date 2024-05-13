@@ -21,23 +21,27 @@
 
 
     &.btn-primary {
-      @apply bg-primary-50 border-primary-50 text-primary-95 hover:bg-primary-60 hover:border-primary-60 disabled:bg-neutral-85 disabled:text-neutral-80 disabled:border-neutral-85;
+      @apply bg-primary border-primary text-primary-50 hover:bg-primary-700 hover:border-primary-700 disabled:bg-neutral-300 disabled:text-neutral-500 disabled:border-neutral-300;
 
       &.btn-outline {
-        @apply bg-[transparent] text-primary-50;
+        @apply bg-transparent text-primary;
       }
 
       &.btn-text{
-        @apply text-primary-50 border-[transparent] bg-[transparent]
+        @apply font-semibold text-primary border-transparent bg-transparent
       }
       
     }
 
     &.btn-neutral {
-      @apply bg-neutral-50 border-neutral-50 text-neutral-95 hover:bg-neutral-60 hover:border-neutral-60;
+      @apply bg-black border-black text-white hover:bg-neutral-600 hover:border-neutral-600;
 
       &.btn-outline {
-        @apply bg-[transparent] text-neutral-50;
+        @apply bg-transparent text-black;
+      }
+
+      &.btn-text{
+        @apply text-black border-transparent bg-transparent
       }
     }
   }
@@ -51,7 +55,7 @@
   }
 
   .input {
-    @apply py-1 px-2 w-[300px] h-9 flex flex-col text-[16px] leading-7 text-neutral-60 ;
+    @apply py-1 px-2 w-[300px] h-9 flex flex-col text-[16px] leading-7 text-neutral ;
 
     &.input-md {
       @apply p-3;
