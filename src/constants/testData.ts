@@ -5,7 +5,7 @@ export type QuestionAnswer =
   }
 
 
-export const data: QuestionAnswer[] = [
+export const questions: QuestionAnswer[] = [
   {
     question: '¿Qué son los componentes de acordeón?',
     answer: 'Los componentes de acordeón son elementos de interfaz de usuario utilizados para organizar y presentar contenido de manera colapsable.'

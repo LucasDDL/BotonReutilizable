@@ -1,25 +1,9 @@
-import  { useState } from 'react';
-import { AccordionItem } from './AccordionItem';
+import  { PropsWithChildren } from 'react';
 
-export const Accordion = ({ data }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const handleClick = (index) => {
-    setActiveIndex(index === activeIndex? null : index);
-  };
-
+export const Accordion = ({ children }: PropsWithChildren) => {
   return (
-    <div>
-      {data.map((item, index) => (
-        <AccordionItem
-          key={index}
-          title={item.question}
-          isOpen={activeIndex === index}
-          onClick={() => handleClick(index)}
-        >
-          {item.answer}
-        </AccordionItem>
-      ))}
+    <div className="flex flex-col gap-4">
+      {children}
     </div>
   );
 };
