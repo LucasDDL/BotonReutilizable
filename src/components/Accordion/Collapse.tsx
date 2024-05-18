@@ -1,11 +1,6 @@
 import React, { useState } from "react"
 
-export const Collapse = ({title, children}) => {
-    const [isExpanded, setIsExpanded] = useState(false);
+export const Collapse = ({ title, children }) => {
 
-    return(
-        <div>
-            
-        </div>
-    )
+    return null
 }

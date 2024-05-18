@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
   .btn {
     @apply border rounded font-medium not-italic flex items-center justify-center ;
@@ -55,7 +54,7 @@
   }
 
   .input {
-    @apply py-1 px-2 w-[300px] h-9 flex flex-col text-[16px] leading-7 text-neutral ;
+    @apply py-1 px-2 flex flex-col text-[14px] leading-5 text-neutral ;
 
     &.input-md {
       @apply p-3;
@@ -64,6 +63,15 @@
     &.input-lg {
       @apply p-4;
     }
+    
+    &.input-sm {
+      @apply p-2;
+    }
+
+    &:hover(:not(.input-error, .input-disabled)) {
+      @apply border-primary;
+    }
+    
     input {
       outline: none;
       flex: 1;

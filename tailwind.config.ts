@@ -12,7 +12,6 @@ const config: Config = {
       white: '#f9f4f8', // neutral-50
       transparent: "transparent",
       current: 'currentColor',
-
       primary: {
         DEFAULT: "#0017a6",
         50: "#e9eafb",
@@ -73,7 +72,6 @@ const config: Config = {
       md: ['14px', { lineHeight: '22px' }],
       lg: ['18px', { lineHeight: '32px' }],
     },
-
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
