@@ -1,7 +1,6 @@
-import { Span } from 'next/dist/trace'
-import React, { ComponentProps, ReactNode } from 'react'
+import React, { HtmlHTMLAttributes, ReactNode } from 'react'
 
-export type ButtonProps = ComponentProps<'button'> & {
+export type ButtonProps = HtmlHTMLAttributes<HTMLButtonElement> & {
   size?: 'lg' | 'md' | 'sm',
   variant?: 'contained' | 'outlined' | 'text'
   color?: 'primary' | 'neutral'

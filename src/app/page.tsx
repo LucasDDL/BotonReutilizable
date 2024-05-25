@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from "@/components";
+import { Avatar } from "@/components/Avatar";
 import Input from "@/components/Input/Input";
 import { ArrowDown } from "@/icons/components";
 import { Notification } from "@/icons/components/Notification";
@@ -12,7 +13,7 @@ export default function Home() {
       <div className="flex mt-[22px] mr-[37px] gap-4 items-center justify-end">
         <Notification />
         <Settings />
-        <div className="flex justify-center items-center rounded-full size-10 bg-primary text-[16px] leading-[22px] text-white font-normal">S</div>
+        <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6SGvshARHJ5GYSH_Kig8-cYNw5rO3nWn7mA&s" color="neutral" size="lg">S</Avatar>
       </div>
       <div className="flex flex-col gap-8 mx-auto">
         <h1 className="text-primary text-[20px] leading-[42px]">Clientes / <span className="text-[32px] leading-[42px]">Sebastian Salines</span></h1>
@@ -54,8 +55,8 @@ export default function Home() {
             </div>
           </div>
           <div className="flex items-center justify-end gap-6 pr-2 self-end">
-            <Button className="font-medium" startIcon={<Settings/>} variant="text" color="primary" size="md">Cancelar</Button>
-            <Button size="md" startIcon={<Settings/>}>Guardar</Button>
+            <Button className="font-medium" startIcon={<Settings />} variant="text" color="primary" size="md">Cancelar</Button>
+            <Button size="md" startIcon={<Settings />}>Guardar</Button>
           </div>
         </div>
       </div>
