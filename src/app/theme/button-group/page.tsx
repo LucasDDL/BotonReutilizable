@@ -11,20 +11,22 @@ export default function ButtonGroupTest() {
         <Button variant="contained">DOS</Button>
         <Button variant="text">TRES</Button>
       </ButtonGroup>
-      <Checkbox label="Checkbox" />
+      <Checkbox size="sm" label="Checkbox" />
+      <Checkbox size="md" label="Checkbox" />
+      <Checkbox size="lg"  label="Checkbox" />
       <div className="flex gap-3">
         <Chip avatar={<Avatar color="neutral">S</Avatar>}>Content</Chip>
         <Chip startIcon={<ArrowDown />} color="neutral">Content</Chip>
         <Chip endIcon={<ArrowDown />}>Content</Chip>
       </div>
-      <div className="flex gap-3">
-        <IconButton color="neutral">
+      <div className="flex items-center gap-3">
+        <IconButton size="sm" color="neutral">
           <ShoppingBagOutline />
         </IconButton>
-        <IconButton>
+        <IconButton size="md">
           <Settings />
         </IconButton>
-        <IconButton>
+        <IconButton size="lg">
           <StoreFontOutline />
         </IconButton>
       </div>

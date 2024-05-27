@@ -1,4 +1,5 @@
-import { PropsWithChildren, ReactNode } from "react"
+import { Children, PropsWithChildren, ReactElement, cloneElement, isValidElement } from "react"
+import { Button, ButtonProps } from "../Button/Button"
 
 export type ButtonGroupProps = PropsWithChildren & {
   size?: 'lg' | 'md' | 'sm'
@@ -9,11 +10,21 @@ export type ButtonGroupProps = PropsWithChildren & {
 }
 
 export const ButtonGroup = (props: ButtonGroupProps) => {
-  const { children, variant, size, color, className, direction } = props
+  const { children, variant = 'outlined', size, color, className, direction } = props
 
   return (
     <div className={`btn-group btn-group-${direction} ${className}`}>
-      {children}
+      {Children.map(children, child => {
+        if (!isValidElement(child)) {
+          return null
+        }
+
+        if (child.type !== Button) {
+          throw new Error('ButtonGroup only accepts Button components as children')
+        }
+
+        return cloneElement<ButtonProps>(child as ReactElement, { variant, size, color })
+      })}
     </div>
   )
 }

@@ -3,9 +3,10 @@ import { SVGProps } from "react"
 export const Logo = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={22}
-    height={22}
+    width={24}
+    height={24}
     fill="none"
+    viewBox="0 0 24 24"
     {...props}
   >
     <ellipse cx={11} cy={11.315} fill="#F7F7FC" rx={9.778} ry={10.093} />

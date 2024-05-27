@@ -6,6 +6,7 @@ export const Vector = (props: SVGProps<SVGSVGElement>) => (
     width={20}
     height={16}
     fill="none"
+    viewBox="0 0 24 24"
     {...props}
   >
     <path

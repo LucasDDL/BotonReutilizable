@@ -113,22 +113,27 @@
     }
   }
 
-  .icon-btn{
-    @apply rounded-full flex justify-center items-center hover:bg-neutral-500 p-2 cursor-pointer;
-    &.icon-btn-md{
-      svg{
-        @apply size-8
+  .icon-btn {
+    @apply size-6 rounded-full flex justify-center items-center cursor-pointer;
+    svg {
+      @apply size-5;
+    }
 
+    &.icon-btn-md {
+      @apply size-8;
+      svg {
+        @apply size-6;
       }
     }
-    &.icon-btn-lg{
-      svg{
+
+    &.icon-btn-lg {
+      @apply size-14;
+      svg {
         @apply size-10
       }
     }
     
   }
-
   
   .checkbox{
     @apply flex justify-center items-center;  
@@ -140,13 +145,22 @@
     }
 
     &.checkbox-sm{
-      @apply text-[10px];
+      @apply text-[12px];
+      svg {
+        @apply size-4;
+      }
     }
     &.checkbox-md{
-      @apply text-[13px]
+      @apply text-[13px];
+      svg {
+        @apply size-6;
+      }
     }
     &.checkbox-lg{
-      @apply text-[16px]
+      @apply text-[16px];
+      svg {
+        @apply size-8;
+      }
     }
     .checkbox-icon{
       @apply aspect-square flex justify-center items-center
