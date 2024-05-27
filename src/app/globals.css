@@ -66,7 +66,7 @@
       @apply bg-primary border-primary text-primary-50 hover:bg-primary-700 hover:border-primary-700 disabled:bg-neutral-300 disabled:text-neutral-500 disabled:border-neutral-300;
 
       &.btn-outlined {
-        @apply bg-transparent text-primary hover:bg-primary-200;
+        @apply bg-transparent text-primary hover:bg-primary-200 active:bg-primary-400 active:text-primary-100;
       }
 
       &.btn-text{

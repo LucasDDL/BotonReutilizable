@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Checkbox, IconButton } from "@/components";
+import { Button, ButtonGroup, Checkbox, IconButton, ToggleButton } from "@/components";
 import { Chip } from "@/components";
 import { Avatar } from "@/components/Avatar";
 import { ArrowDown, Settings, ShoppingBagOutline, StoreFontOutline } from "@/icons/components";
@@ -8,8 +8,8 @@ export default function ButtonGroupTest() {
     <div className="flex flex-col gap-3 justify-center items-center min-h-screen">
       <ButtonGroup>
         <Button variant="outlined">UNO</Button>
-        <Button variant="outlined">DOS</Button>
-        <Button variant="outlined">TRES</Button>
+        <Button variant="contained">DOS</Button>
+        <Button variant="text">TRES</Button>
       </ButtonGroup>
       <Checkbox label="Checkbox" />
       <div className="flex gap-3">
@@ -28,6 +28,9 @@ export default function ButtonGroupTest() {
           <StoreFontOutline />
         </IconButton>
       </div>
+      <ToggleButton>
+        <Button>boton</Button>
+      </ToggleButton>
     </div>
   )
 }
