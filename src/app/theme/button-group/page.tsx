@@ -1,7 +1,7 @@
-import { Button, ButtonGroup, Checkbox } from "@/components";
+import { Button, ButtonGroup, Checkbox, IconButton } from "@/components";
 import { Chip } from "@/components";
 import { Avatar } from "@/components/Avatar";
-import { ArrowDown } from "@/icons/components";
+import { ArrowDown, Settings, ShoppingBagOutline, StoreFontOutline } from "@/icons/components";
 
 export default function ButtonGroupTest() {
   return (
@@ -12,9 +12,22 @@ export default function ButtonGroupTest() {
         <Button variant="outlined">TRES</Button>
       </ButtonGroup>
       <Checkbox label="Checkbox" />
-      <Chip avatar={<Avatar color="neutral">S</Avatar>}>Content</Chip>
-      <Chip startIcon={<ArrowDown />} color="neutral">Content</Chip>
-      <Chip endIcon={<ArrowDown />}>Content</Chip>
+      <div className="flex gap-3">
+        <Chip avatar={<Avatar color="neutral">S</Avatar>}>Content</Chip>
+        <Chip startIcon={<ArrowDown />} color="neutral">Content</Chip>
+        <Chip endIcon={<ArrowDown />}>Content</Chip>
+      </div>
+      <div className="flex gap-3">
+        <IconButton color="neutral">
+          <ShoppingBagOutline />
+        </IconButton>
+        <IconButton>
+          <Settings />
+        </IconButton>
+        <IconButton>
+          <StoreFontOutline />
+        </IconButton>
+      </div>
     </div>
   )
 }

@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { PropsWithChildren } from "react"
 
 export type AvatarProps = PropsWithChildren & {
@@ -6,7 +5,6 @@ export type AvatarProps = PropsWithChildren & {
   className?: string
   color?: 'primary' | 'neutral'
   size?: 'sm' | 'md' | 'lg'
-
 }
 
 export const Avatar = (props: AvatarProps) => {

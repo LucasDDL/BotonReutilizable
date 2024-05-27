@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer components {
+ 
   .avatar {
     @apply flex justify-center items-center rounded-full text-[16px] leading-[22px] font-normal overflow-hidden;
     &.avatar-primary{
@@ -46,7 +47,7 @@
   }
 
   .btn {
-    @apply border rounded font-medium not-italic flex items-center justify-center ;
+    @apply border rounded font-medium not-italic flex items-center justify-center;
 
     &.btn-sm {
       @apply px-0.5 py-1 text-base;
@@ -65,11 +66,11 @@
       @apply bg-primary border-primary text-primary-50 hover:bg-primary-700 hover:border-primary-700 disabled:bg-neutral-300 disabled:text-neutral-500 disabled:border-neutral-300;
 
       &.btn-outlined {
-        @apply bg-transparent text-primary;
+        @apply bg-transparent text-primary hover:bg-primary-200;
       }
 
       &.btn-text{
-        @apply font-semibold text-primary border-transparent bg-transparent;
+        @apply font-semibold text-primary border-transparent bg-transparent hover:bg-primary-200;
       }
       
     }
@@ -111,6 +112,23 @@
       }
     }
   }
+
+  .icon-btn{
+    @apply rounded-full flex justify-center items-center hover:bg-neutral-500 p-2 cursor-pointer;
+    &.icon-btn-md{
+      svg{
+        @apply size-8
+
+      }
+    }
+    &.icon-btn-lg{
+      svg{
+        @apply size-10
+      }
+    }
+    
+  }
+
   
   .checkbox{
     @apply flex justify-center items-center;  
