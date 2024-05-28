@@ -8,10 +8,10 @@ export type TabsProps = PropsWithChildren & {
 
 export const Tabs = (props: TabsProps) => {
   const { children, className } = props
-  const [activeChildIndex, setActiveChildIndex] = useState<number | null>(null)
+  const [activeChildIndex, setActiveChildIndex] = useState<number | null>(0)
 
   const handleClick = (index: number) => {
-    setActiveChildIndex(activeChildIndex === index ? null : index)
+    setActiveChildIndex(index)
   }
   return (
     <div className={`tabs ${className}`}>
