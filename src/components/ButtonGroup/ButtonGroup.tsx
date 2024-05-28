@@ -19,11 +19,11 @@ export const ButtonGroup = (props: ButtonGroupProps) => {
           return null
         }
 
-        if (child.type !== Button) {
-          throw new Error('ButtonGroup only accepts Button components as children')
-        }
+        // if (child.type !== Button) {
+        //   throw new Error('ButtonGroup only accepts Button components as children')
+        // }
 
-        return cloneElement<ButtonProps>(child as ReactElement, { variant, size, color })
+        return cloneElement<ButtonProps>(child as ReactElement, { ...child.props, variant, size, color })
       })}
     </div>
   )

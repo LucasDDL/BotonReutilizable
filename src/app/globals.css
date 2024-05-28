@@ -3,31 +3,42 @@
 @tailwind utilities;
 
 @layer components {
+  .tabs{
+    @apply flex;
+  }
+
+  .tab{
+    @apply py-3 px-4 text-primary active:bg-primary-200 cursor-pointer
+    }
+  
+  .tab-active{
+    @apply border-b-2 border-b-primary
+  }  
  
   .avatar {
     @apply flex justify-center items-center rounded-full text-[16px] leading-[22px] font-normal overflow-hidden;
     &.avatar-primary{
-      @apply bg-primary text-primary-50
+      @apply bg-primary text-primary-50;
     }
     &.avatar-neutral{
-      @apply bg-neutral text-neutral-50
+      @apply bg-neutral text-neutral-50;
     }
 
     &.avatar-sm{
-      @apply size-10
+      @apply size-10;
     }
     &.avatar-md{
-      @apply size-12
+      @apply size-12;
     }
     &.avatar-lg{
-      @apply size-14
+      @apply size-14;
     }
   }
 
   .chip{
     @apply flex gap-3 justify-center items-center h-8 rounded-r-full rounded-l-full p-4 ;
     .avatar{
-      @apply size-6 ml-[-11px] 
+      @apply size-6 ml-[-11px]; 
     }
     svg{
       @apply first:ml-[-11px] last:mr-[-10px]; 
@@ -35,13 +46,13 @@
     &.chip-primary{
       @apply bg-primary text-primary-50 border-primary hover:bg-primary-700 hover:border-primary-700;
       &.chip-outlined{
-        @apply bg-transparent text-primary
+        @apply bg-transparent text-primary;
       }
     }
     &.chip-neutral{
       @apply bg-neutral text-neutral-50 border-neutral hover:bg-neutral-500 hover:border-neutral-500;
       &.chip-outlined{
-        @apply bg-transparent text-neutral
+        @apply bg-transparent text-neutral;
       }
     }
   }
@@ -93,10 +104,10 @@
     .btn{
       @apply rounded-none;
       &:first-of-type{
-        @apply rounded-tl rounded-bl
+        @apply rounded-tl rounded-bl;
       }
       &:last-of-type{
-        @apply rounded-tr rounded-br
+        @apply rounded-tr rounded-br;
       } 
     }
     &.btn-group-vertical{
@@ -104,10 +115,10 @@
       .btn{
         @apply rounded-none;
         &:first-of-type{
-          @apply rounded-tl rounded-tr
+          @apply rounded-tl rounded-tr;
         }
         &:last-of-type{
-          @apply rounded-br rounded-bl
+          @apply rounded-br rounded-bl;
         }
       }
     }
@@ -129,7 +140,7 @@
     &.icon-btn-lg {
       @apply size-14;
       svg {
-        @apply size-10
+        @apply size-10;
       }
     }
     
@@ -138,10 +149,10 @@
   .checkbox{
     @apply flex justify-center items-center;  
     &.checkbox-primary{
-      @apply text-primary
+      @apply text-primary;
     }
     &.checkbox-neutral{
-      @apply text-neutral
+      @apply text-neutral;
     }
 
     &.checkbox-sm{
@@ -163,7 +174,7 @@
       }
     }
     .checkbox-icon{
-      @apply aspect-square flex justify-center items-center
+      @apply aspect-square flex justify-center items-center;
     }
   }
 
@@ -172,7 +183,7 @@
   }
 
   .field {
-    @apply rounded border flex py-1 px-2 gap-[6px] items-center
+    @apply rounded border flex py-1 px-2 gap-[6px] items-center;
   }
 
   .input {
@@ -198,6 +209,10 @@
       outline: none;
       flex: 1;
     }
+  }
+
+  .toggle-btn-active{
+    @apply bg-primary-50 text-primary;
   }
 }
 
