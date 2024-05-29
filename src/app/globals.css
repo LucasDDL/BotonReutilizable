@@ -14,13 +14,13 @@
     @apply flex;
   }
 
-  .tab{
-    @apply py-3 px-4 text-primary active:bg-primary-200 cursor-pointer;
-    }
-  
-  .tab-active{
-    @apply border-b-2 border-b-primary;
-  }  
+  .tab {
+    @apply border-b-2 border-b-transparent py-3 px-4 text-primary active:bg-primary-200 cursor-pointer;
+    
+    &.tab-active{
+      @apply border-b-primary;
+    }  
+  }
  
   .avatar {
     @apply flex justify-center items-center rounded-full text-[16px] leading-[22px] font-normal overflow-hidden;
@@ -42,7 +42,7 @@
     }
   }
 
-  .chip{
+  .chip {
     @apply flex gap-3 justify-center items-center h-8 rounded-r-full rounded-l-full p-4 ;
     .avatar{
       @apply size-6 ml-[-11px]; 
@@ -218,8 +218,12 @@
     }
   }
 
-  .toggle-btn-active{
-    @apply bg-primary-50 text-primary;
+  .toggle-button {
+    .btn {
+      &.toggle-btn-active {
+        @apply bg-primary text-white;
+      }
+    }
   }
 }
 
