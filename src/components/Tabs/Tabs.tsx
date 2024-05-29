@@ -8,7 +8,7 @@ export type TabsProps = PropsWithChildren & {
 
 export const Tabs = (props: TabsProps) => {
   const { children, className } = props
-  const [activeChildIndex, setActiveChildIndex] = useState<number | null>(0)
+  const [activeChildIndex, setActiveChildIndex] = useState<number>(0)
 
   const handleClick = (index: number) => {
     setActiveChildIndex(index)
@@ -19,7 +19,9 @@ export const Tabs = (props: TabsProps) => {
         if (!isValidElement(child)) {
           return null
         }
+
         const isActive = activeChildIndex === index
+
         return cloneElement(child as ReactElement, {
           ...child.props,
           onClick: () => handleClick(index),

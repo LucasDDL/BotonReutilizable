@@ -14,7 +14,8 @@ export type ToggleButtonProps = PropsWithChildren & {
 }
 
 export const ToggleButton = (props: ToggleButtonProps) => {
-  const { children, variant = 'contained', size = 'sm', color = 'primary', className, direction = 'horizontal' } = props
+  const { children, ...buttonGroupProps } = props
+
   const [activeChildIndex, setActiveChildIndex] = useState<number | null>(null)
 
   const handleClick = (index: number) => {
@@ -22,19 +23,19 @@ export const ToggleButton = (props: ToggleButtonProps) => {
   }
 
   return (
-    <ButtonGroup variant={variant} size={size} color={color} className={className} direction={direction}>
-
+    <ButtonGroup {...buttonGroupProps} className={`${buttonGroupProps.className || ''} toggle-button`} >
       {Children.map(children, (child, index) => {
         if (!isValidElement(child)) {
           return null
         }
         const isActive = activeChildIndex === index
+
         return cloneElement(child as ReactElement, {
           ...child.props,
           onClick: () => handleClick(index),
           className: isActive ? `${child.props.className} toggle-btn-active` : child.props.className
         })
       })}
-    </ButtonGroup>
+    </ButtonGroup >
   )
 }
