@@ -3,16 +3,23 @@
 @tailwind utilities;
 
 @layer components {
+  .app-bar{
+    @apply flex justify-between px-6 items-center;
+    &.app-bar-primary{
+      @apply bg-primary text-primary-50
+    } 
+  }
+
   .tabs{
     @apply flex;
   }
 
   .tab{
-    @apply py-3 px-4 text-primary active:bg-primary-200 cursor-pointer
+    @apply py-3 px-4 text-primary active:bg-primary-200 cursor-pointer;
     }
   
   .tab-active{
-    @apply border-b-2 border-b-primary
+    @apply border-b-2 border-b-primary;
   }  
  
   .avatar {
