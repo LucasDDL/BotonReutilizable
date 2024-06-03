@@ -1,15 +1,15 @@
-import { PropsWithChildren } from "react"
+import { HTMLProps, PropsWithChildren } from "react"
 
-export type PaperProps = PropsWithChildren & {
+export type PaperProps = PropsWithChildren & HTMLProps<HTMLDivElement> & {
   className?: string
   color?: 'primary' | 'secundary'
   variant?: 'default' | 'outlined'
 }
 
-export const Paper = (props: PaperProps) => {
-  const { children, className, color = 'primary', variant = 'default' } = props
+export const Paper = (props: PaperProps) => {0
+  const { children, className, color = 'primary', variant = 'default', ...divProps } = props
   return (
-    <div className={`paper ${className}`}>
+    <div className={`paper ${className}`} {...divProps}>
       {children}
     </div>
   )

@@ -1,11 +1,23 @@
-import { AppBar, Button, ButtonGroup, Checkbox, IconButton, Paper, Tab, Tabs, ToggleButton } from "@/components";
+'use client'
+
+import { AppBar, Button, ButtonGroup, Checkbox, IconButton, Paper, Popover, Tab, Tabs, ToggleButton } from "@/components";
 import { Chip } from "@/components";
 import { Avatar } from "@/components/Avatar";
 import { ArrowDown, Settings, ShoppingBagOutline, StoreFontOutline } from "@/icons/components";
+import { useRef, useState } from "react";
 
 export default function ButtonGroupTest() {
+  const [open, setOpen] = useState(false)
+
+  const anchor = useRef<HTMLButtonElement>(null)
+
   return (
     <div className="flex flex-col gap-3 justify-center items-center min-h-screen my-5 ">
+      <h1>ButtonGroup</h1>
+      <Button ref={anchor} onClick={() => setOpen(prev => !prev)}>UNO</Button>
+      <Popover open={open} anchor={anchor.current}>
+        <h1>Popover</h1>
+      </Popover>
       <div>
         <h1>ButtonGroup</h1>
         <ButtonGroup variant="contained" color='primary'>
