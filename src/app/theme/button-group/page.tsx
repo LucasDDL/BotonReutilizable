@@ -1,11 +1,11 @@
-import { Button, ButtonGroup, Checkbox, IconButton, Tab, Tabs, ToggleButton } from "@/components";
+import { AppBar, Button, ButtonGroup, Checkbox, IconButton, Paper, Tab, Tabs, ToggleButton } from "@/components";
 import { Chip } from "@/components";
 import { Avatar } from "@/components/Avatar";
 import { ArrowDown, Settings, ShoppingBagOutline, StoreFontOutline } from "@/icons/components";
 
 export default function ButtonGroupTest() {
   return (
-    <div className="flex flex-col gap-3 justify-center items-center min-h-screen mt-5">
+    <div className="flex flex-col gap-3 justify-center items-center min-h-screen my-5 ">
       <div>
         <h1>ButtonGroup</h1>
         <ButtonGroup variant="contained" color='primary'>
@@ -66,6 +66,18 @@ export default function ButtonGroupTest() {
           <Tab label="Item Two" />
           <Tab label="Item Three" />
         </Tabs>
+      </div>
+
+      <h1>AppBar</h1>
+      <AppBar color="neutral">
+        <Avatar>B</Avatar>
+        <Settings />
+      </AppBar>
+
+      <div className="flex gap-4">
+        <Paper>
+          Tu prima
+        </Paper>
       </div>
     </div>
   )

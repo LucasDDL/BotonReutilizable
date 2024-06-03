@@ -3,10 +3,17 @@
 @tailwind utilities;
 
 @layer components {
+  .paper{
+    @apply  bg-white text-center shadow-xl p-2
+  }
+
   .app-bar{
-    @apply flex justify-between px-6 items-center;
+    @apply flex px-6 items-center w-full;
     &.app-bar-primary{
-      @apply bg-primary text-primary-50
+      @apply bg-primary text-primary-50;
+    }
+    &.app-bar-neutral{
+      @apply bg-neutral text-neutral-50;
     } 
   }
 
