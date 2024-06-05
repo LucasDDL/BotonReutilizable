@@ -4,9 +4,9 @@ export type TabProps = {
 }
 
 export const Tab = (props: TabProps) => {
-  const { label, className } = props
+  const { label, className, ...rest } = props
   return (
-    <button className={`tab ${className}`}>
+    <button className={`tab ${className}`} {...rest}>
       {label}
     </button>
   )
