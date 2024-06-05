@@ -1,8 +1,6 @@
 'use client'
 
-import { AppBar, Button, ButtonGroup, Checkbox, IconButton, Paper, Popover, Tab, Tabs, ToggleButton } from "@/components";
-import { Chip } from "@/components";
-import { Avatar } from "@/components/Avatar";
+import { Alert, AppBar, Avatar, Button, ButtonGroup, Checkbox, Chip, IconButton, Paper, Popover, Radio, RadioGroup, Tab, Tabs, ToggleButton } from "@/components";
 import { ArrowDown, Settings, ShoppingBagOutline, StoreFontOutline } from "@/icons/components";
 import { useRef, useState } from "react";
 
@@ -13,7 +11,7 @@ export default function ButtonGroupTest() {
 
   return (
     <div className="flex flex-col gap-3 justify-center items-center min-h-screen my-5 ">
-      <h1>ButtonGroup</h1>
+      <h1>Button</h1>
       <Button ref={anchor} onClick={() => setOpen(prev => !prev)}>UNO</Button>
       <Popover open={open} anchor={anchor.current}>
         <h1>Popover</h1>
@@ -91,6 +89,65 @@ export default function ButtonGroupTest() {
           Tu prima
         </Paper>
       </div>
-    </div>
+      <div>
+        <h2>Radio Group</h2>
+        <RadioGroup direction="vertical" color="neutral" size="sm">
+          <Radio label="End" />
+          <Radio labelPlacement="top" label="Top" />
+          <Radio labelPlacement="start" label="Start" />
+          <Radio labelPlacement="bottom" label="Bottom" />
+        </RadioGroup>
+      </div>
+      <div className="flex flex-col gap-2">
+        <h1 className="text-center">Alert</h1>
+        <div className="flex gap-2">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-center">Outlined</h2>
+            <Alert variant="outlined">
+              Info Alert
+            </Alert>
+            <Alert variant="outlined" severity="error">
+              Error Alert
+            </Alert>
+            <Alert variant="outlined" severity="success">
+              Success Alert
+            </Alert>
+            <Alert variant="outlined" severity="warning">
+              Warning Alert
+            </Alert>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h2 className="text-center">Contanied</h2>
+            <Alert variant="contained">
+              Info Alert
+            </Alert>
+            <Alert variant="contained" severity="error">
+              Error Alert
+            </Alert>
+            <Alert variant="contained" severity="success">
+              Success Alert
+            </Alert>
+            <Alert variant="contained" severity="warning">
+              Warning Alert
+            </Alert>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h2 className="text-center">Default</h2>
+            <Alert>
+              Info Alert
+            </Alert>
+            <Alert severity="error">
+              Error Alert
+            </Alert>
+            <Alert severity="success">
+              Success Alert
+            </Alert>
+            <Alert severity="warning">
+              Warning Alert
+            </Alert>
+          </div>
+        </div>
+      </div>
+    </div >
   )
 }

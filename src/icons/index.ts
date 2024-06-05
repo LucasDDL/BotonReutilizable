@@ -1,5 +1,4 @@
-import { AccountOutline, ArrowDown, CartOutline, ChartFilled, CheckbookOutline, CheckboxOutline, CheckboxOutlineBlank, CheckSmall, CreditCard, CurrencyExchange, Domain, EnterpriseOutline, Finance, Google, Logo, MonetizationOutline, Money, Notification, OrdersOutline, PaymentOutline, Person, SavingsOutline, SellOutline, Settings, ShoppingBagOutline, StoreFontOutline, TrackChanges, Vector } from "./components";
-import { ChartOutline } from "./components/ChartOutline";
+import { AccountOutline, ArrowDown, CartOutline, ChartFilled, ChartOutline, CheckbookOutline, CheckboxOutline, CheckboxOutlineBlank, CheckCircle, CheckCircleOutline, CheckSmall, CreditCard, CurrencyExchange, Domain, EnterpriseOutline, Error, ErrorOutline, Finance, Google, Info, InfoOutline, Logo, MonetizationOutline, Money, Notification, OrdersOutline, PaymentOutline, Person, RadioChecked, RadioUnchecked, SavingsOutline, SellOutline, Settings, ShoppingBagOutline, StoreFontOutline, TrackChanges, Vector, Warning, WarningOutline } from "./components";
 
 export const Icons = {
   ArrowDown,
@@ -30,5 +29,15 @@ export const Icons = {
   ShoppingBagOutline,
   StoreFontOutline,
   TrackChanges,
-  Vector
+  Vector,
+  RadioChecked,
+  RadioUnchecked,
+  CheckCircle,
+  CheckCircleOutline,
+  Error,
+  ErrorOutline,
+  Info,
+  InfoOutline,
+  Warning,
+  WarningOutline
 } as const
