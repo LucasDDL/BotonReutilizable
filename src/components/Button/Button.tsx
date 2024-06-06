@@ -1,3 +1,4 @@
+import { cn } from '@/lib'
 import React, { HtmlHTMLAttributes, ReactNode, forwardRef } from 'react'
 
 export type ButtonProps = HtmlHTMLAttributes<HTMLButtonElement> & {
@@ -11,7 +12,7 @@ export type ButtonProps = HtmlHTMLAttributes<HTMLButtonElement> & {
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const { children, className, startIcon, endIcon, color = 'primary', size = 'sm', variant = 'contained', ...buttonProps } = props
   return (
-    <button ref={ref} className={`btn btn-${size} btn-${color} btn-${variant} ${className}`} {...buttonProps}>
+    <button ref={ref} className={cn('btn', `btn-${size}`, `btn-${color}`, `btn-${variant}`, className)} {...buttonProps}>
       {startIcon && startIcon}
       {children}
       {endIcon && endIcon}

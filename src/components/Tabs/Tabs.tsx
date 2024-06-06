@@ -1,4 +1,5 @@
 'use client'
+import { cn } from "@/lib"
 import { PropsWithChildren, ReactNode, Children, isValidElement, cloneElement, ReactElement, useState } from "react"
 
 export type TabsProps = PropsWithChildren & {
@@ -14,7 +15,7 @@ export const Tabs = (props: TabsProps) => {
     setActiveChildIndex(index)
   }
   return (
-    <div className={`tabs ${className}`}>
+    <div className={cn('tabs', className)}>
       {Children.map(children, (child, index) => {
         if (!isValidElement(child)) {
           return null
