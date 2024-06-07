@@ -1,7 +1,7 @@
 'use client'
 
 import { Alert, AppBar, Avatar, Button, ButtonGroup, Checkbox, Chip, IconButton, Paper, Popover, Radio, RadioGroup, Tab, Tabs, ToggleButton } from "@/components";
-import { ArrowDown, Settings, ShoppingBagOutline, StoreFontOutline } from "@/icons/components";
+import { ArrowDown, Cancel, Settings, ShoppingBagOutline, StoreFontOutline } from "@/icons/components";
 import { useRef, useState } from "react";
 
 export default function ButtonGroupTest() {
@@ -121,7 +121,7 @@ export default function ButtonGroupTest() {
             <Alert variant="contained">
               Info Alert
             </Alert>
-            <Alert variant="contained" severity="error">
+            <Alert endIcon={<IconButton><Cancel /></IconButton>} variant="contained" severity="error">
               Error Alert
             </Alert>
             <Alert variant="contained" severity="success">

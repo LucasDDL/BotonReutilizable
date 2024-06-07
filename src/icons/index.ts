@@ -1,4 +1,4 @@
-import { AccountOutline, ArrowDown, CartOutline, ChartFilled, ChartOutline, CheckbookOutline, CheckboxOutline, CheckboxOutlineBlank, CheckCircle, CheckCircleOutline, CheckSmall, CreditCard, CurrencyExchange, Domain, EnterpriseOutline, Error, ErrorOutline, Finance, Google, Info, InfoOutline, Logo, MonetizationOutline, Money, Notification, OrdersOutline, PaymentOutline, Person, RadioChecked, RadioUnchecked, SavingsOutline, SellOutline, Settings, ShoppingBagOutline, StoreFontOutline, TrackChanges, Vector, Warning, WarningOutline } from "./components";
+import { AccountOutline, ArrowDown, Cancel, CancelOutline, CartOutline, ChartFilled, ChartOutline, CheckbookOutline, CheckboxOutline, CheckboxOutlineBlank, CheckCircle, CheckCircleOutline, CheckSmall, CreditCard, CurrencyExchange, Domain, EnterpriseOutline, Error, ErrorOutline, Finance, Google, Info, InfoOutline, Logo, MonetizationOutline, Money, Notification, OrdersOutline, PaymentOutline, Person, RadioChecked, RadioUnchecked, SavingsOutline, SellOutline, Settings, ShoppingBagOutline, StoreFontOutline, TrackChanges, Vector, Warning, WarningOutline } from "./components";
 
 export const Icons = {
   ArrowDown,
@@ -39,5 +39,7 @@ export const Icons = {
   Info,
   InfoOutline,
   Warning,
-  WarningOutline
+  WarningOutline,
+  CancelOutline,
+  Cancel
 } as const

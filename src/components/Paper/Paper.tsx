@@ -1,4 +1,5 @@
 import { HTMLProps, PropsWithChildren } from "react"
+import '../../app/css/paper.css'
 
 export type PaperProps = PropsWithChildren & HTMLProps<HTMLDivElement> & {
   className?: string
@@ -6,7 +7,8 @@ export type PaperProps = PropsWithChildren & HTMLProps<HTMLDivElement> & {
   variant?: 'default' | 'outlined'
 }
 
-export const Paper = (props: PaperProps) => {0
+export const Paper = (props: PaperProps) => {
+
   const { children, className, color = 'primary', variant = 'default', ...divProps } = props
   return (
     <div className={`paper ${className}`} {...divProps}>

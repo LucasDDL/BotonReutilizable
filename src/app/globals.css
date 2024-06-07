@@ -3,50 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  .alert{
-    @apply flex gap-2 p-2 border border-transparent;
-    &.alert-info{
-      @apply bg-primary-200 text-primary;
-      &.alert-contained{
-        @apply bg-primary border-primary text-primary-50;
-      }
-      &.alert-outlined{
-        @apply bg-transparent border-primary text-primary;
-      }
-    }
-    &.alert-success{
-      @apply bg-green-200 text-green-900 ;
-      &.alert-contained{
-        @apply bg-green text-green-50 border-green;
-      }
-      &.alert-outlined{
-        @apply bg-transparent text-green border-green;
-      }
-    }
-    &.alert-error{
-      @apply bg-red-200 text-red;
-      &.alert-contained{
-        @apply bg-red border-red text-red-50; 
-      }
-      &.alert-outlined{
-        @apply bg-transparent text-red border-red;
-      }
-    }
-    &.alert-warning{
-      background-color: rgb(250, 190, 78);
-      color: chocolate;
-      &.alert-contained{
-       @apply border-[#d2691e] bg-[#d2691e] text-[#ffff]
-      }
-      &.alert-outlined{
-       @apply border-[#d2691e] bg-transparent text-[#d2691e]
-      }
-    }
-  }
-
-  .paper{
-    @apply  bg-white text-center shadow-xl p-2;
-  }
 
   .app-bar{
     @apply flex px-6 items-center w-full;
