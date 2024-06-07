@@ -1,3 +1,4 @@
+import { cn } from "@/lib"
 import { PropsWithChildren } from "react"
 
 export type AvatarProps = PropsWithChildren & {
@@ -19,7 +20,7 @@ export const Avatar = (props: AvatarProps) => {
   let imageSize = imageSizes[size]
 
   return (
-    <div className={`avatar avatar-${color} avatar-${size} ${className}`}>
+    <div className={cn("avatar", `avatar-${color}`, `avatar-${size}`, className)}>
       {src ? <img src={src} alt="avatar photo" /> : children}
     </div>
   )

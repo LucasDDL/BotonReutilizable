@@ -1,8 +1,14 @@
-import  { PropsWithChildren } from 'react';
+import { cn } from '@/lib';
+import { PropsWithChildren } from 'react';
 
-export const Accordion = ({ children }: PropsWithChildren) => {
+export type AccordionProps = PropsWithChildren & {
+  className?: string;
+}
+
+export const Accordion = (props: AccordionProps) => {
+  const { className, children } = props
   return (
-    <div className="flex flex-col gap-4">
+    <div className={cn("accordion", className)}>
       {children}
     </div>
   );

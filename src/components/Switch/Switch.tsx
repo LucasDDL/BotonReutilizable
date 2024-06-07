@@ -8,11 +8,13 @@ export type SwitchProps = {
   onChange?: (checked: boolean) => void;
   label?: string
   className?: string;
+  color?: 'primary' | 'neutral';
+  size?: 'sm' | 'md' | 'lg'
 }
 
 // TODO: refactor to use input & forwardRef
 export const Switch = (props: SwitchProps) => {
-  const { checked: checkedProp, onChange, className, label } = props;
+  const { checked: checkedProp, onChange, className, label, color = 'primary', size = 'lg' } = props;
 
   const isControlled = checkedProp !== undefined && onChange !== undefined;
 
@@ -28,14 +30,14 @@ export const Switch = (props: SwitchProps) => {
   }, [checkedProp, onChange, isControlled]);
 
   const active = isControlled ? checkedProp : checked;
-  
+
   return (
     <div
-      className={cn('switch relative w-12 h-7 cursor-pointer rounded-full bg-primary-200 hover:bg-primary-300', className)}
+      className={cn('switch', `switch-${color}`, `switch-${size}`, className)}
       onClick={handleChange}
     >
       <div
-        className={cn('switch-thumb absolute w-6 h-6 rounded-full top-0.5 transition', active ? 'checked right-0.5 bg-primary' : 'left-0.5 bg-primary-400')}
+        className={cn('switch-thumb ', active ? `checked-right switch-thumb-${color} switch-thumb-${size}` : `checked-left switch-thumb-${color} switch-thumb-${size}`)}
       />
     </div>
   )

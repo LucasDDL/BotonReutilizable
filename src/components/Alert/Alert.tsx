@@ -1,6 +1,7 @@
 import { CheckCircleOutline, ErrorOutline, InfoOutline, WarningOutline } from "@/icons/components";
 import { PropsWithChildren, ReactNode, useMemo } from "react";
 import '../../app/css/alert.css'
+import { cn } from "@/lib";
 
 export type AlertProps = PropsWithChildren & {
   className?: string
@@ -34,7 +35,7 @@ export const Alert = (props: AlertProps) => {
   }, [severity, startIcon])
 
   return (
-    <div className={`alert alert-${severity} alert-${variant} ${className}`}>
+    <div className={cn("alert", `alert-${severity}`, `alert-${variant}`, className)}>
       {icon}
       {children}
       {endIcon}

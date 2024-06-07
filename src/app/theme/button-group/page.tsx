@@ -21,9 +21,10 @@ export default function ButtonGroupTest() {
       <h2>Switch</h2>
       <div className="flex flex-col gap-1">
         <h5>Uncontrolled</h5>
-        <Switch />
+        <Switch color="neutral" />
+        <Switch size="md" />
         <h5>Controlled</h5>
-        <Switch checked={switchOn} onChange={(v) => setSwitchOn(v)} />
+        <Switch size="sm" checked={switchOn} onChange={(v) => setSwitchOn(v)} />
       </div>
       <h2>ButtonGroup</h2>
       <ButtonGroup variant="contained" color='primary'>

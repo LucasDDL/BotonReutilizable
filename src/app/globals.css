@@ -3,6 +3,79 @@
 @tailwind utilities;
 
 @layer components {
+  .accordion{
+    @apply flex flex-col gap-4;
+  }
+  .accordion-item-col{
+    @apply border border-primary-100 rounded-lg flex flex-col items-stretch;
+  }
+  .accordion-item-row{
+    @apply flex gap-4 py-3 px-4 justify-center text-md font-semibold cursor-pointer;
+    span{
+      @apply inline-flex flex-1;
+    }
+  }
+
+  .switch{
+    @apply relative cursor-pointer rounded-full;
+    &.switch-primary{
+     @apply bg-primary-200 hover:bg-primary-300;
+    }
+    &.switch-neutral{
+      @apply bg-neutral-400 hover:bg-neutral-500;
+    }
+
+    &.switch-lg{
+      @apply w-12 h-7;
+    }
+    &.switch-md{
+      @apply w-8 h-5;
+    }
+    &.switch-sm{
+      @apply w-6 h-3
+    }
+  }
+  .switch-thumb{
+    @apply absolute rounded-full top-0.5 transition;
+    &.checked-right{
+      @apply right-0.5;
+      &.switch-thumb-primary{
+        @apply bg-primary;
+      }
+      &.switch-thumb-neutral{
+        @apply bg-neutral;
+      }
+
+      &.switch-thumb-lg{
+        @apply size-6;
+      }
+      &.switch-thumb-md{
+        @apply size-4;
+      }
+      &.switch-thumb-sm{
+        @apply size-2
+      }
+    }
+    &.checked-left{
+      @apply left-0.5;
+      &.switch-thumb-primary{
+        @apply bg-primary-400;
+      }
+      &.switch-thumb-neutral{
+        @apply bg-neutral-700;
+      }
+
+      &.switch-thumb-lg{
+        @apply size-6;
+      }
+      &.switch-thumb-md{
+        @apply size-4;
+      }
+      &.switch-thumb-sm{
+        @apply size-2
+      }
+    }
+  }
 
   .app-bar{
     @apply flex px-6 items-center w-full;

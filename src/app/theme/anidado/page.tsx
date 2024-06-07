@@ -11,7 +11,6 @@ export default function OtraPagina() {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
-
   return (
     <main className="px-6 py-4">
       <h1>Otra pag</h1>
