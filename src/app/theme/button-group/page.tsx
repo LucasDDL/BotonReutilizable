@@ -1,6 +1,6 @@
 'use client'
 
-import { Alert, AppBar, Avatar, Button, ButtonGroup, Checkbox, Chip, IconButton, Paper, Popover, Radio, RadioGroup, Tab, Tabs, ToggleButton } from "@/components";
+import { Alert, AppBar, Avatar, Button, ButtonGroup, Checkbox, Chip, IconButton, Paper, Popover, Radio, RadioGroup, Switch, Tab, Tabs, ToggleButton } from "@/components";
 import { ArrowDown, Cancel, Settings, ShoppingBagOutline, StoreFontOutline } from "@/icons/components";
 import { useRef, useState } from "react";
 
@@ -9,31 +9,38 @@ export default function ButtonGroupTest() {
 
   const anchor = useRef<HTMLButtonElement>(null)
 
+  const [switchOn, setSwitchOn] = useState(false)
+
   return (
     <div className="flex flex-col gap-3 justify-center items-center min-h-screen my-5 ">
-      <h1>Button</h1>
+      <h2>Button</h2>
       <Button ref={anchor} onClick={() => setOpen(prev => !prev)}>UNO</Button>
       <Popover open={open} anchor={anchor.current}>
-        <h1>Popover</h1>
+        <h2>Popover</h2>
       </Popover>
-      <div>
-        <h1>ButtonGroup</h1>
-        <ButtonGroup variant="contained" color='primary'>
-          <Button>UNO</Button>
-          <Button>DOS</Button>
-          <Button>TRES</Button>
-        </ButtonGroup>
+      <h2>Switch</h2>
+      <div className="flex flex-col gap-1">
+        <h5>Uncontrolled</h5>
+        <Switch />
+        <h5>Controlled</h5>
+        <Switch checked={switchOn} onChange={(v) => setSwitchOn(v)} />
       </div>
+      <h2>ButtonGroup</h2>
+      <ButtonGroup variant="contained" color='primary'>
+        <Button>UNO</Button>
+        <Button>DOS</Button>
+        <Button>TRES</Button>
+      </ButtonGroup>
       <div>
-        <h1>Checkbox</h1>
+        <h2>Checkbox</h2>
         <div className="flex gap-3">
           <Checkbox size="sm" label="Checkbox" />
           <Checkbox size="md" label="Checkbox" />
           <Checkbox size="lg" label="Checkbox" />
         </div>
-      </div>
+      </div>2
       <div>
-        <h1>Chip</h1>
+        <h2>Chip</h2>
         <div className="flex gap-3">
           <Chip avatar={<Avatar color="neutral">S</Avatar>}>Content</Chip>
           <Chip startIcon={<ArrowDown />} color="neutral">Content</Chip>
@@ -41,7 +48,7 @@ export default function ButtonGroupTest() {
         </div>
       </div>
       <div>
-        <h1>IconButton</h1>
+        <h2>IconButton</h2>
         <div className="flex items-center gap-3">
           <IconButton size="sm" color="neutral">
             <ShoppingBagOutline />
@@ -55,7 +62,7 @@ export default function ButtonGroupTest() {
         </div>
       </div>
       <div>
-        <h1>ToggleButton</h1>
+        <h2>ToggleButton</h2>
         <div className="flex flex-col gap-3">
           <ToggleButton>
             <Button>boton 1</Button>
@@ -70,7 +77,7 @@ export default function ButtonGroupTest() {
         </div>
       </div>
       <div>
-        <h1>Tabs</h1>
+        <h2>Tabs</h2>
         <Tabs>
           <Tab label="Item One" />
           <Tab label="Item Two" />
@@ -78,7 +85,7 @@ export default function ButtonGroupTest() {
         </Tabs>
       </div>
 
-      <h1>AppBar</h1>
+      <h2>AppBar</h2>
       <AppBar color="neutral">
         <Avatar>B</Avatar>
         <Settings />
@@ -99,7 +106,7 @@ export default function ButtonGroupTest() {
         </RadioGroup>
       </div>
       <div className="flex flex-col gap-2">
-        <h1 className="text-center">Alert</h1>
+        <h2 className="text-center">Alert</h2>
         <div className="flex gap-2">
           <div className="flex flex-col gap-2">
             <h2 className="text-center">Outlined</h2>
