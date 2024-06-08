@@ -1,3 +1,4 @@
+import { cn } from "@/lib"
 import { PropsWithChildren, ReactNode } from "react"
 
 export type ChipProps = PropsWithChildren & {
@@ -14,7 +15,7 @@ export const Chip = (props: ChipProps) => {
   const { variant, size = 'sm', color = "primary", startIcon, endIcon, avatar, className, children } = props
 
   return (
-    <div className={`chip chip-${size} chip-${variant} chip-${color} ${className}`}>
+    <div className={cn("chip", `chip-${size}`, `chip-${variant}`, `chip-${color}`, className)}>
       {avatar && avatar}
       {startIcon && startIcon}
       {children}

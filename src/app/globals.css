@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 @layer components {
+  .sidebar{
+    @apply bg-white border-r border-r-primary min-h-screen w-[224px] pt-[15px] pl-[14px] pr-[10px];
+    .logo{
+      @apply text-[20px] leading-[22px] text-primary flex gap-[10px] mb-[50px];
+    }
+  }
+
+  .menu{
+    @apply flex flex-col gap-[10px];
+  }
+  .menu-item{
+    @apply relative cursor-pointer flex rounded-md py-[6px] px-4 gap-2  font-normal text-primary text-sm hover:bg-primary-50 active:bg-primary-100;
+    span{
+      @apply flex-1;
+    }
+    .menu-item-active{
+      @apply absolute left-0 w-[3px] h-[22px] rounded-r bg-primary;
+    }
+  }
+
   .accordion{
     @apply flex flex-col gap-4;
   }
@@ -318,6 +338,9 @@
 
   .input {
     @apply py-1 px-2 flex flex-col text-[14px] leading-5 text-neutral ;
+    label{
+      @apply text-lbl text-neutral-600;
+    }
 
     &.input-md {
       @apply p-3;

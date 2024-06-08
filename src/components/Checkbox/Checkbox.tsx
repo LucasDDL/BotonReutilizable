@@ -2,6 +2,7 @@
 
 import { CheckboxOutline } from "@/icons/components/CheckboxOutline"
 import { CheckboxOutlineBlank } from "@/icons/components/CheckboxOutlineBlank"
+import { cn } from "@/lib"
 import { HtmlHTMLAttributes, ReactNode, useState } from "react"
 
 export type CheckboxProps = HtmlHTMLAttributes<HTMLInputElement> & {
@@ -28,7 +29,7 @@ export const Checkbox = (props: CheckboxProps) => {
   }
 
   return (
-    <div className={`checkbox checkbox-${color} checkbox-${size} ${className}`} onClick={handleClick}>
+    <div className={cn("checkbox", `checkbox-${color}`, `checkbox-${size}`, className)} onClick={handleClick}>
       {checked ? checkedIcon : uncheckedIcon}
       <div>
         {label}

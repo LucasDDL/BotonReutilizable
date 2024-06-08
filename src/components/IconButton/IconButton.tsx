@@ -1,3 +1,4 @@
+import { cn } from "@/lib"
 import { PropsWithChildren, ReactNode } from "react"
 
 export type IconButtonProps = PropsWithChildren & {
@@ -8,9 +9,9 @@ export type IconButtonProps = PropsWithChildren & {
 }
 
 export const IconButton = (props: IconButtonProps) => {
-  const { color = 'primary', size = 'sm', children } = props
+  const { color = 'primary', size = 'sm', children, className } = props
   return (
-    <div className={`btn icon-btn btn-${color} icon-btn-${size}`}>
+    <div className={cn("btn", "icon-btn", `btn-${color}`, `icon-btn-${size}`, className)}>
       {children}
     </div>
   )

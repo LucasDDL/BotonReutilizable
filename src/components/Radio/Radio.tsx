@@ -1,4 +1,5 @@
 import { RadioChecked, RadioUnchecked } from "@/icons/components"
+import { cn } from "@/lib"
 import { ReactNode, useState } from "react"
 
 export type RadioProps = {
@@ -23,7 +24,7 @@ export const Radio = (props: RadioProps) => {
   const [checked, setChecked] = useState(false)
 
   return (
-    <div className={`radio radio-${color} radio-${size} radio-${labelPlacement}`} onClick={() => setChecked(prev => !prev)}>
+    <div className={cn("radio", `radio-${color}`, `radio-${size}`, `radio-${labelPlacement}`)} onClick={() => setChecked(prev => !prev)}>
       {checked ? checkedIcon : uncheckedIcon}
       {label}
     </div>
