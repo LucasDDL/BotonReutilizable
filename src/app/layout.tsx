@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import { TooltipProvider } from "@/components/atoms/tooltip";
+import { TooltipProvider } from "@/components/atoms/tooltip/tooltip";
 
 const fira = Noto_Sans({ subsets: ["latin"], weight: "400", variable: '--font-fira' });
 

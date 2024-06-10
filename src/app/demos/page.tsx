@@ -15,7 +15,7 @@ import {
   Users2,
 } from "lucide-react"
 
-import { Badge } from "@/components/atoms/badge"
+import { Badge } from "@/components/atoms/badge/badge"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -24,7 +24,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/atoms/breadcrumb"
-import { Button } from "@/components/atoms/button"
+import { Button } from "@/components/atoms/button/button"
 import {
   Card,
   CardContent,
@@ -40,17 +40,17 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/atoms/dropdown-menu"
-import { Input } from "@/components/atoms/input"
-import { Label } from "@/components/atoms/label"
+} from "@/components/atoms/dropdown-menu/dropdown-menu"
+import { Input } from "@/components/atoms/input/input"
+import { Label } from "@/components/atoms/label/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/atoms/select"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/sheet"
+} from "@/components/atoms/select/select"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/sheet/sheet"
 import {
   Table,
   TableBody,
@@ -58,17 +58,17 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/atoms/table"
-import { Textarea } from "@/components/atoms/textarea"
+} from "@/components/atoms/table/table"
+import { Textarea } from "@/components/atoms/textarea/textarea"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/components/atoms/toggle-group"
+} from "@/components/atoms/toggle-group/toggle-group"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/atoms/tooltip"
+} from "@/components/atoms/tooltip/tooltip"
 import { ModeToggle } from "@/components/molecules/mode-toggle"
 
 export default function Dashboard() {

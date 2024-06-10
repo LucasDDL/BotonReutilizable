@@ -7,7 +7,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/atoms/carousel"
+} from "@/components/atoms/carousel/carousel"
 
 export function CarouselDemo() {
   return (

@@ -12,8 +12,8 @@ import {
   Users,
 } from "lucide-react"
 
-import { Badge } from "@/components/atoms/badge"
-import { Button } from "@/components/atoms/button"
+import { Badge } from "@/components/atoms/badge/badge"
+import { Button } from "@/components/atoms/button/button"
 import {
   Card,
   CardContent,
@@ -28,9 +28,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/atoms/dropdown-menu"
-import { Input } from "@/components/atoms/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/sheet"
+} from "@/components/atoms/dropdown-menu/dropdown-menu"
+import { Input } from "@/components/atoms/input/input"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/sheet/sheet"
 
 export default function Dashboard() {
   return (

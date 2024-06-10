@@ -20,7 +20,7 @@ import {
   Users2,
 } from "lucide-react"
 
-import { Badge } from "@/components/atoms/badge"
+import { Badge } from "@/components/atoms/badge/badge"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -29,7 +29,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/atoms/breadcrumb"
-import { Button } from "@/components/atoms/button"
+import { Button } from "@/components/atoms/button/button"
 import {
   Card,
   CardContent,
@@ -46,16 +46,16 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/atoms/dropdown-menu"
-import { Input } from "@/components/atoms/input"
+} from "@/components/atoms/dropdown-menu/dropdown-menu"
+import { Input } from "@/components/atoms/input/input"
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
-} from "@/components/atoms/pagination"
-import { Progress } from "@/components/atoms/progress"
-import { Separator } from "@/components/atoms/separator"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/sheet"
+} from "@/components/atoms/pagination/pagination"
+import { Progress } from "@/components/atoms/progress/progress"
+import { Separator } from "@/components/atoms/separator/separator"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/sheet/sheet"
 import {
   Table,
   TableBody,
@@ -63,18 +63,18 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/atoms/table"
+} from "@/components/atoms/table/table"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/atoms/tabs"
+} from "@/components/atoms/tabs/tabs"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/atoms/tooltip"
+} from "@/components/atoms/tooltip/tooltip"
 
 export function Dashboard() {
   return (
