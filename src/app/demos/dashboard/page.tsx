@@ -31,7 +31,6 @@ import {
 } from "@/components/atoms/dropdown-menu"
 import { Input } from "@/components/atoms/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/sheet"
-import { ModeToggle } from "@/components/molecules"
 
 export default function Dashboard() {
   return (
@@ -199,7 +198,6 @@ export default function Dashboard() {
               </div>
             </form>
           </div>
-          <ModeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full">

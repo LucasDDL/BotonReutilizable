@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
-
-import { Sidebar, ThemeProvider } from "@/components";
+import { ThemeProvider } from "next-themes";
+import { TooltipProvider } from "@/components/atoms/tooltip";
 
 const fira = Noto_Sans({ subsets: ["latin"], weight: "400", variable: '--font-fira' });
 
@@ -25,10 +25,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen">
-            <Sidebar />
-            <div className="flex flex-col flex-1 bg-white dark:bg-neutral-700">{children}</div>
-          </div>
+          <TooltipProvider>
+            <div className="flex min-h-screen">
+              <div className="flex flex-col flex-1">{children}</div>
+            </div>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
