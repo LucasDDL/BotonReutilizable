@@ -1,20 +1,42 @@
 'use client';
 
-import { Button } from "@/components";
+import { Backdrop, Button } from "@/components";
 import { Avatar } from "@/components/Avatar";
+import { Dialog } from "@/components/Dialog/Dialog";
 import Input from "@/components/Input/Input";
 import { ArrowDown } from "@/icons/components";
 import { Notification } from "@/icons/components/Notification";
 import { Settings } from "@/icons/components/Settings";
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/ui/atoms/menubar";
 
 export default function Home() {
   return (
     <div className="min-w-full flex flex-col">
+      <Dialog centered>
+        <h3>Test</h3>
+        <Button>Close</Button>
+      </Dialog>
       <div className="flex mt-[22px] mr-[37px] gap-4 items-center justify-end">
         <Notification />
         <Settings />
         <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6SGvshARHJ5GYSH_Kig8-cYNw5rO3nWn7mA&s" color="neutral" size="lg">S</Avatar>
       </div>
+      <Menubar>
+        <MenubarMenu>
+          <MenubarTrigger>File</MenubarTrigger>
+          <MenubarContent>
+            <MenubarItem>
+              New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+            </MenubarItem>
+            <MenubarItem>New Window</MenubarItem>
+            <MenubarSeparator />
+            <MenubarItem>Share</MenubarItem>
+            <MenubarSeparator />
+            <MenubarItem>Print</MenubarItem>
+          </MenubarContent>
+        </MenubarMenu>
+      </Menubar>
+
       <div className="flex flex-col gap-8 mx-auto">
         <h1 className="text-primary text-[20px] leading-[42px]">Clientes / <span className="text-[32px] leading-[42px]">Sebastian Salines</span></h1>
         <p className="my-4 max-w-[50vw] text-black">

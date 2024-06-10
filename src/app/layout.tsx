@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import {  Noto_Sans } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
-import {Sidebar} from "@/components/Sidebar/Sidebar";
 
-const fira = Noto_Sans({ subsets: ["latin"], weight: "400", variable: '--font-fira'});
+import { Sidebar, ThemeProvider } from "@/components";
+
+const fira = Noto_Sans({ subsets: ["latin"], weight: "400", variable: '--font-fira' });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +19,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fira.variable} font-sans`}>
-        <div className="flex min-h-screen">
-          <Sidebar />
-          <div className="flex flex-col flex-1 bg-white">{children}</div>
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex min-h-screen">
+            <Sidebar />
+            <div className="flex flex-col flex-1 bg-white dark:bg-neutral-700">{children}</div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

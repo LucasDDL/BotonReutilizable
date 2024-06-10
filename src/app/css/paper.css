@@ -1,7 +1,5 @@
 @tailwind components;
 
 @layer components {
-  .paper {
-    @apply bg-white text-center shadow-xl p-2;
-  }
+  
 }

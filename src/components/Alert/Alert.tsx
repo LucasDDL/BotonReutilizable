@@ -1,6 +1,5 @@
 import { CheckCircleOutline, ErrorOutline, InfoOutline, WarningOutline } from "@/icons/components";
 import { PropsWithChildren, ReactNode, useMemo } from "react";
-import '../../app/css/alert.css'
 import { cn } from "@/lib";
 
 export type AlertProps = PropsWithChildren & {

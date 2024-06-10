@@ -1,5 +1,4 @@
 import { HTMLProps, PropsWithChildren } from "react"
-import '../../app/css/paper.css'
 
 export type PaperProps = PropsWithChildren & HTMLProps<HTMLDivElement> & {
   className?: string

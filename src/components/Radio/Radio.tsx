@@ -1,3 +1,5 @@
+'use client'
+
 import { RadioChecked, RadioUnchecked } from "@/icons/components"
 import { ReactNode, useState } from "react"
 
