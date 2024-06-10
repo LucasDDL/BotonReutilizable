@@ -12,6 +12,6 @@ export function Sidebar() {
       </div>
       <ModeToggle />
       <Menu />
-    </aside>
+    </aside >
   )
 }

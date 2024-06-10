@@ -39,7 +39,7 @@ export default function ButtonGroupTest() {
           <Checkbox size="md" label="Checkbox" />
           <Checkbox size="lg" label="Checkbox" />
         </div>
-      </div>2
+      </div>
       <div>
         <h2>Chip</h2>
         <div className="flex gap-3">
